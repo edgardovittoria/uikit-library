@@ -25,7 +25,7 @@ module.exports = {
 }
 ```
 
-- Replace the content of your **index.css** (or **tailwin.css**) width:
+- Replace the content of your **index.css** (or **tailwind.css**) width:
 
 ```css
 @tailwind base;
