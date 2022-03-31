@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-5xl font-semibold mt-2 mb-2;
+    }
+    h2 {
+        @apply text-3xl font-medium mt-2 mb-2;
+    }
+    h3 {
+        @apply text-2xl font-medium;
+    }
+    h4 {
+        @apply text-xl font-medium;
+    }
+    h5 {
+        @apply text-lg font-bold;
+    }
+    h6 {
+        @apply text-base font-bold;
+    }
+    table{
+        @apply w-3/5
+    }
+    thead, tbody {
+        @apply border border-gray-300
+    }
+    thead>tr>th{
+        @apply p-2
+    }
+    tbody>tr>th{
+        @apply font-normal p-2
+    }
+
+    th, td {
+        @apply text-left p-2
+    }
+
+    tbody>tr:nth-child(even){
+        @apply bg-gray-200
+    }
+}

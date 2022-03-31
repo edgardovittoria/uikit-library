@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,8 +35,9 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "uikit-library",
-  "author": "edgardovittoria",
+  "name": "uikit-library-ev",
+  "author": "Edgardo Vittoria",
+  "repository": "https://github.com/edgardovittoria/uikit-library.git",
   "module": "dist/uikit-library.esm.js",
   "size-limit": [
     {
@@ -51,19 +52,27 @@
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@size-limit/preset-small-lib": "^7.0.8",
+    "@storybook/addon-controls": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-knobs": "^6.4.0",
     "@storybook/addon-links": "^6.4.19",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addons": "^6.4.19",
     "@storybook/react": "^6.4.19",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
+    "@headlessui/react": "^1.5.0",
+    "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.4",
     "husky": "^7.0.4",
+    "postcss": "^8.4.12",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-is": "^17.0.2",
     "size-limit": "^7.0.8",
+    "tailwindcss": "^3.0.23",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
     "typescript": "^4.6.3"
