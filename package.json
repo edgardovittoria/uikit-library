@@ -1,5 +1,5 @@
 {
-  "version": "0.2.3",
+  "version": "0.2.4",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -37,6 +37,7 @@
   },
   "name": "uikit-library-ev",
   "author": "Edgardo Vittoria",
+  "keywords": ["uikit", "React", "Typescript", "Storibook", "Tailwind", "tsdx"],
   "repository": "https://github.com/edgardovittoria/uikit-library.git",
   "module": "dist/uikit-library.esm.js",
   "size-limit": [
