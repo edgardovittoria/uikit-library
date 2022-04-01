@@ -10,7 +10,15 @@ const metaSpinner: ComponentMeta<typeof Spinner> = {
         color: {
             control: {type: 'color'}
         }
-    }
+    },
+    parameters: {
+        backgrounds: {
+            default: 'def',
+            values: [
+                { name: 'def', value: `linear-gradient(to right, whitesmoke, beige);` },
+            ],
+        },
+    },
 }
 
 export default metaSpinner;

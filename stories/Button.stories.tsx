@@ -16,7 +16,15 @@ const metaButton: ComponentMeta<typeof Button> = {
         loadingColor: {
             control: {type: 'color'}
         }
-    }
+    },
+    parameters: {
+        backgrounds: {
+            default: 'def',
+            values: [
+                { name: 'def', value: `linear-gradient(to right, white, indigo);` },
+            ],
+        },
+    },
 }
 
 export default metaButton;
