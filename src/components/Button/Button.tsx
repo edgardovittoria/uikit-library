@@ -1,6 +1,6 @@
 import React, { SyntheticEvent } from 'react';
 
-import {Loading} from '../src';
+import {Spinner} from '../../index';
 
 export interface ButtonProps  {
     textColor?: string,
@@ -51,7 +51,7 @@ export const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps)
         >
             {
                 loading && (
-                    <Loading className='absolute ml-auto mr-auto left-0 right-0'
+                    <Spinner className='absolute ml-auto mr-auto left-0 right-0'
                              color={loadingColor}
                              size={loadingSize}
                     />

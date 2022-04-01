@@ -1,11 +1,11 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 
-import {Loading} from "../src";
+import { Spinner } from "../src";
 
-const metaSpinner: ComponentMeta<typeof Loading> = {
-    title: 'Components/Loading',
-    component: Loading,
+const metaSpinner: ComponentMeta<typeof Spinner> = {
+    title: 'Components/Spinner',
+    component: Spinner,
     argTypes: {
         color: {
             control: {type: 'color'}
@@ -15,10 +15,10 @@ const metaSpinner: ComponentMeta<typeof Loading> = {
 
 export default metaSpinner;
 
-const Template: ComponentStory<typeof Loading> = args => <Loading {...args}/>
+const Template: ComponentStory<typeof Spinner> = args => <Spinner {...args}/>
 
-export const Spinner = Template.bind({});
-Spinner.args = {
+export const SpinnerComponent = Template.bind({});
+SpinnerComponent.args = {
     spinnerType: 'spinner',
 };
 

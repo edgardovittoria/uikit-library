@@ -17,7 +17,7 @@ export interface LoadingProps  {
     spinnerType?: 'spinner' | 'spinner2' | 'spinner3' | 'spinner4' | 'spinner5' | 'spinner6' | 'spinner7' | 'spinner8' | 'spinner9' | 'spinner10' | 'spinner11'
 }
 
-export const Loading: React.FunctionComponent<LoadingProps> = (props: LoadingProps) => {
+export const Spinner: React.FunctionComponent<LoadingProps> = (props: LoadingProps) => {
     const { color = 'body', size = 'small', className = '', spinnerType = 'spinner' } = props;
 
     let spinnerSize : number = 20;
