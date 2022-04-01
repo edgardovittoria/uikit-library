@@ -20,7 +20,7 @@ export const Select: FC<SelectProps> = (props) => {
     const [optionHovered, setOptionHovered] = useState(-1);
 
     return (
-        <div className="w-72 fixed">
+        <div className="w-72">
             <Listbox value={selected} onChange={(value) => {
                 setSelected(value)
                 setOptionHovered(-1)
