@@ -60,6 +60,6 @@ module.exports = {
 ```
 
 ### Customize your component with Storybook
-Access to [Storybook Docs](https://624599a9718618004a4f45e3-ffbbfieajl.chromatic.com), visually customize your component and use the automatically generated React component
+Access to [Storybook Docs](https://624599a9718618004a4f45e3-wjldawhkvr.chromatic.com), visually customize your component and use the automatically generated React component
 
 ![This is an image](https://github.com/edgardovittoria/uikit-library/blob/main/public/documentation/storybook.png)
