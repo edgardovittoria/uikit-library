@@ -1,4 +1,3 @@
-import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 import { Card, CardHeader, CardFooter, CardBodyText, Button } from "../src";
