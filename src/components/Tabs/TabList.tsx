@@ -9,21 +9,21 @@ export interface TabListItem {
 export type TabListProps = {
     tabs: TabListItem[],
     classNameTabListContainer?: string,
-    tabListContainerBackground?: string,
+    tabListContainerBackgroundColor?: string,
     tabListItemColor?: string,
     tabListItemSelectedColor?: string,
 }
 
 export const TabList: React.FC<TabListProps> = (props) => {
 
-    const {tabs, classNameTabListContainer, tabListContainerBackground, tabListItemColor, tabListItemSelectedColor} = props
+    const {tabs, classNameTabListContainer, tabListContainerBackgroundColor, tabListItemColor, tabListItemSelectedColor} = props
 
     const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
     return (
         <Tab.List
             className={`flex p-1 space-x-1 bg-green-300 rounded-xl ${classNameTabListContainer}`}
-            style={{backgroundColor: tabListContainerBackground}}
+            style={{backgroundColor: tabListContainerBackgroundColor}}
         >
             {tabs.map((tab) => (
                 <Tab

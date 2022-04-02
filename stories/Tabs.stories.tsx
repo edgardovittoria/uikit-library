@@ -6,7 +6,18 @@ const meta: ComponentMeta<typeof Tabs> = {
     title: 'Components/Tabs',
     component: Tabs,
     argTypes: {
-
+        tabListContainerBackgroundColor: {
+            control: {type: 'color'}
+        },
+        tabListItemSelectedColor: {
+            control: {type: 'color'}
+        },
+        tabListItemColor: {
+            control: {type: 'color'}
+        },
+        associatedTab: {
+            table:{disable: true}
+        }
     },
     parameters: {
         backgrounds: {
@@ -176,9 +187,10 @@ Tabs_Component.args = {
         {id: 2, name: 'Tab2'},
         {id: 3, name: 'Tab3'},
     ],
-    classNameTabContainer: 'max-w-2xl',
-    tabListContainerBackground: 'MediumSlateBlue',
-    tabListItemSelectedColor: 'MediumSlateBlue',
+    tabListContainerBackgroundColor: 'mediumslateblue',
+    tabListItemSelectedColor: 'mediumslateblue',
     tabListItemColor: 'white',
-    classNamePanelContiner: 'p-6 flex justify-center'
+    classNamePanelContiner: 'p-6 flex justify-center',
+    classNameTabContainer: 'max-w-2xl',
+    classNameTabListContainer: ''
 };
