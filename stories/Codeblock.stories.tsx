@@ -4,7 +4,15 @@ import {Codeblock} from "../src";
 
 const metaCodeblock: ComponentMeta<typeof Codeblock> = {
     title: 'Components/Codeblock',
-    component: Codeblock
+    component: Codeblock,
+    parameters: {
+        backgrounds: {
+            default: 'def',
+            values: [
+                { name: 'def', value: `linear-gradient(to right, lightgreen, green);` },
+            ],
+        },
+    },
 }
 
 export default metaCodeblock;

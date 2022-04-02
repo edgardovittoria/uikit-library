@@ -30,7 +30,7 @@ export const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps)
     return (
         <button
         className={`
-        flex relative rounded-md px-4 py-2 items-center
+        flex relative rounded-md px-3 py-1 items-center
         ${className}
         ${disabled || loading ? 'opacity-40 hover:opacity-40' : 'hover:opacity-70'}
         ${inverted ? 'bg-transparent' : ''}

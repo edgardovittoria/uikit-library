@@ -1,4 +1,5 @@
 import React from "react";
+
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 import {Card, CardBodyImage, CardHeader} from "../src";
@@ -34,7 +35,15 @@ const metaCardImage: ComponentMeta<typeof Card> = {
         borderColor: {
             control: {type: 'color'}
         },
-    }
+    },
+    parameters: {
+        backgrounds: {
+            default: 'def',
+            values: [
+                { name: 'def', value: `linear-gradient(to right, violet, pink);` },
+            ],
+        },
+    },
 }
 
 export default metaCardImage;
@@ -56,11 +65,11 @@ ImageCard.args = {
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png',
     title: 'Card Image',
     shadow: true,
-    width: '400px',
+    width: '350px',
     borderSize: '2px',
     borderColor: 'violet',
     hoverEffect: 'zoom',
     titleColor: 'violet',
-    backgroundColor: '#4a4a4a'
+    backgroundColor: 'white'
 }
 

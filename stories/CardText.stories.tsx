@@ -31,7 +31,15 @@ const metaCard: ComponentMeta<typeof Card> = {
         borderColor: {
             control: {type: 'color'}
         },
-    }
+    },
+    parameters: {
+        backgrounds: {
+            default: 'def',
+            values: [
+                { name: 'def', value: `linear-gradient(to right, violet, pink);` },
+            ],
+        },
+    },
 }
 
 export default metaCard;
@@ -69,5 +77,6 @@ TextCard.args = {
     borderSize: '1px',
     borderColor: 'black',
     title: 'Card',
+    backgroundColor: 'white'
 }
 
