@@ -10,19 +10,24 @@ export interface DropdownProps {
     titleFontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
     border?: string;
     className?: string;
+    backgroundColor?: string;
+    backgroundColorDropdownItemContainer?: string;
 }
 
 export const Dropdown: React.FC<DropdownProps> = (props) => {
 
-    const {children, title, titleColor, titleFontWeight, border, className, hoverColor = "#f3f4f6"} = props
+    const {
+        children, title, titleColor, titleFontWeight, border, className, 
+        hoverColor = "#f3f4f6", backgroundColor, backgroundColorDropdownItemContainer
+    } = props
     const [dropdownHover, setDropdownHover] = useState(false);
 
     return (
         <Menu as="div" className="relative inline-block text-left">
             <div>
                 <Menu.Button
-                    className={`inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 ${className}`}
-                    style={{color: titleColor, fontWeight: titleFontWeight, border: border, backgroundColor: dropdownHover ? hoverColor : ''}}
+                    className={`inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm font-medium text-gray-700 ${className}`}
+                    style={{color: titleColor, fontWeight: titleFontWeight, border: border, backgroundColor: dropdownHover ? hoverColor : backgroundColor}}
                     onMouseOver={() => setDropdownHover(true)}
                     onMouseOut={() => setDropdownHover(false)}
                 >
@@ -42,7 +47,9 @@ export const Dropdown: React.FC<DropdownProps> = (props) => {
                 leaveTo="transform opacity-0 scale-95"
             >
                 <Menu.Items
-                    className="origin-top-right absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    className="origin-top-right absolute mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    style={{backgroundColor: backgroundColorDropdownItemContainer}}
+                >
                     <div className="py-1">
                         {children}
                     </div>

@@ -8,6 +8,15 @@ const metaDropdown: ComponentMeta<typeof Dropdown> = {
     argTypes: {
         hoverColor: {
             control: {type: 'color'}
+        },
+        backgroundColor: {
+            control: {type: 'color'}
+        },
+        titleColor: {
+            control: {type: 'color'}
+        },
+        backgroundColorDropdownItemContainer: {
+            control: {type: 'color'}
         }
     },
     parameters: {
