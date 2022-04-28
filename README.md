@@ -6,7 +6,7 @@
 npm install uikit-library-ev
 ```
 
-### Install and Configure TailwindCSS
+### Install and configure TailwindCSS
 
 - For the installation follow the [Official Guide](https://tailwindcss.com/docs/guides/create-react-app) on the Tailwind
   Web Site.
