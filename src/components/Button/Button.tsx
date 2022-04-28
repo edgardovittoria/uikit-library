@@ -7,40 +7,53 @@ export interface ButtonProps  {
     backgroundColor?: string,
     border?: string,
     text: string,
-    label: string,
     icon?: JSX.Element,
     loading?: boolean,
     loadingColor?: string,
     loadingSize?: 'small'|'medium'|'large',
+    width?: 'small'|'medium'|'large'|'full',
     className?: string,
     disabled?: boolean,
-    inverted?: boolean,
+    /*inverted?: boolean,
     expanded?: boolean,
     pressed?: boolean,
-    tabIndex?: number,
+    tabIndex?: number,*/
     onClick?: (e: SyntheticEvent<HTMLButtonElement>) => void,
     onKeydown?: (e: SyntheticEvent<HTMLButtonElement>) => void,
 }
 
 export const Button: React.FunctionComponent<ButtonProps> = (props: ButtonProps) => {
-    const { textColor, backgroundColor, border, text, label, loading = false, className = '',
-    disabled = false, inverted, expanded = false, pressed = false, 
-    tabIndex = 0, onClick, onKeydown, icon, loadingColor, loadingSize = 'medium' } = props;
+    const { textColor, backgroundColor, border, text, loading = false, className = '',
+    disabled = false, onClick, onKeydown, icon, loadingColor, loadingSize = 'medium', width = 'small' } = props;
+
+    let size = '150px'
+
+    switch (width) {
+        case 'small':
+            size = 'max-content'
+            break
+        case 'medium':
+            size = '200px'
+            break
+        case 'large':
+            size = '300px'
+            break
+        case 'full':
+            size = '100%'
+            break
+        default:
+            break
+    }
 
     return (
         <button
         className={`
-        flex relative rounded-md px-3 py-1 items-center
+        flex relative rounded-md px-3 py-[4px] items-center justify-center text-lg
         ${className}
         ${disabled || loading ? 'opacity-40 hover:opacity-40' : 'hover:opacity-70'}
-        ${inverted ? 'bg-transparent' : ''}
         `}
-        style={{color: textColor, backgroundColor: backgroundColor, border: border}}
+        style={{color: textColor, backgroundColor: backgroundColor, border: border, width: size}}
         disabled={disabled ? disabled : false} 
-        aria-label={label}
-        aria-expanded={expanded}
-        aria-pressed={pressed}
-        tabIndex={tabIndex}
         onClick={(e) => {
             if (onClick) {
                 onClick(e)

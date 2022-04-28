@@ -1,4 +1,3 @@
-import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 import {Button} from "../src";
@@ -15,6 +14,9 @@ const metaButton: ComponentMeta<typeof Button> = {
         },
         loadingColor: {
             control: {type: 'color'}
+        },
+        icon:{
+            table:{disable: true}
         }
     },
     parameters: {
@@ -34,7 +36,6 @@ const Template: ComponentStory<typeof Button> = args => <Button {...args}/>
 export const DefaultButton = Template.bind({});
 DefaultButton.args = {
     text: 'Button',
-    label: 'Button',
     backgroundColor: 'transparent',
     border: '2px solid indigo',
     textColor: 'indigo'

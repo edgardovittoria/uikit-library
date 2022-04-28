@@ -73,8 +73,6 @@ export const TextCard = Template.bind({});
 TextCard.args = {
     shadow: true,
     width: '400px',
-    borderSize: '1px',
-    borderColor: 'black',
     title: 'Card',
     backgroundColor: 'white'
 }
